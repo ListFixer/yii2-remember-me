@@ -1,0 +1,23 @@
+{
+    "name": "listfixer/yii2-remember-me",
+    "type": "yii2-extension",
+    "description": "Enhanced Remember Me",
+    "keywords": ["yii2", "remember", "cookie", "login"],
+    "license": "BSD-3-Clause",
+    "support": {
+        "source": "https://github.com/listfixer/yii2-remember-me"
+    },
+    "authors": [
+        {
+            "name": "Michael Labriola"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "2.0.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "listfixer\\remember\\": ""
+        }
+    }
+}
