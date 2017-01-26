@@ -28,11 +28,6 @@ To enable this extension, edit your configuration file to include this component
 
 When a user changes their password, you can configure your system to disable all existing identity cookies for that user by invoking this method:
 
-\listfixer\remember\models\UserIdentityCookie::deleteUserCookies( $user->id );
+\listfixer\remember\models\UserIdentityCookie::deleteUserCookies( $this->id );
 
-If you are using the Yii2 Advanced template, then this should be added to resetPassword() in frontend/models/ResetPasswordForm.php.
-
-
-
-
-
+If you are using the Yii2 Advanced template, then this should be added to setPassword() in common/models/User.php.
