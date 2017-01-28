@@ -4,7 +4,7 @@ This extension replaces the standard "Remember Me" identity cookie functionality
 
 When a user requests "Remember Me" during login, a new identity cookie is created for that user for that browser/computer.  The cookie contains three things which are also stored in a database table:  (1) a Cookie ID, which is the record number in the identity cookie database table, (2) A Cookie Key, which is the "password" for that particular cookie, and (3) A User Key, which is the "password" for the associated user.  When I say "password", it is a random string, not an actual password.  The database stores some other information, including the User ID number.
 
-Each time a user restarts their browser and is authenticated using this system, all three items are checked against the database.  If the contents of the cookie matches a record in the database, the user gains access to the system and a new User Key is generated.  The new User Key is stored in the database and in the identity cookie.
+Each time a user restarts their browser and is authenticated using this system, all three items are checked against the database.  If the contents of the cookie match a record in the database, the user gains access to the system and a new User Key is generated.  The new User Key is stored in the database and in the identity cookie.
 
 If a particular user uses three different computers, then there will be three different records in the database, one for each cookie.  When each of these cookies are used to authenticate a user, the User Key for that particular cookie is regenerated, leaving the other identity cookie User Keys unchanged.  This allows a particular user to have "Remember Me" functionality on multiple computers, yet still have their User Key change with each use.
 
