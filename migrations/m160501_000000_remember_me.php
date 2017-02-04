@@ -16,9 +16,9 @@ class m160501_000000_remember_me extends Migration {
             'cookie_key' => Schema::TYPE_STRING . '(64) not null',
             'user_key' => Schema::TYPE_STRING . '(64) not null',
             'last_ip' => Schema::TYPE_STRING . '(40) null',
-            'last_agent' => Schema::TYPE_STRING . '(1024) null',
-         'FOREIGN KEY (user_id) REFERENCES "user" (id) ON DELETE CASCADE ON UPDATE CASCADE'
+            'last_agent' => Schema::TYPE_STRING . '(1024) null'
         ] );
+        $this->addForeignKey( 'user_identity_cookie_foreign', 'user_identity_cookie', 'user_id', 'user', 'id', 'CASCADE', 'CASCADE' );
     }
         
     public function down( )
