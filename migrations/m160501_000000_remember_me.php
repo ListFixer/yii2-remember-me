@@ -17,7 +17,7 @@ class m160501_000000_remember_me extends Migration {
             'user_key' => Schema::TYPE_STRING . '(64) not null',
             'last_ip' => Schema::TYPE_STRING . '(40) null',
             'last_agent' => Schema::TYPE_STRING . '(1024) null',
-         'FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE ON UPDATE CASCADE'
+         'FOREIGN KEY (user_id) REFERENCES "user" (id) ON DELETE CASCADE ON UPDATE CASCADE'
         ] );
     }
         
