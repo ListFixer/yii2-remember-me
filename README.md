@@ -1,6 +1,6 @@
 # yii2-remember-me
 
-This extension replaces the standard "Remember Me" identity cookie functionality of Yii2 with something similar to what is described here:  http://jaspan.com/improved_persistent_login_cookie_best_practice
+This extension replaces the standard "Remember Me" identity cookie functionality of Yii2 with something similar to what is described here:  https://gist.github.com/oleg-andreyev/9dcef18ca3687e12a071648c1abff782
 
 When a user requests "Remember Me" during login, a new identity cookie is created for that user for that browser/computer.  The cookie contains three things which are also stored in a database table:  (1) a Cookie ID, which is the record number in the identity cookie database table, (2) A Cookie Key, which is the "password" for that particular cookie, and (3) A User Key, which is the "password" for the associated user.  When I say "password", it is a random string, not an actual password.  The database stores some other information, including the User ID number.
 
